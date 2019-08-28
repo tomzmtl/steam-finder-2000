@@ -1,0 +1,49 @@
+@import '../../common/variables';
+
+
+.PlayerProfile {
+  position: relative;
+  padding: 60px 80px 0;
+
+  &__name {
+    @include body1;
+
+    width: 350px;
+    border-bottom: 1px solid #EEE;
+  }
+
+  &__avatar {
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    width: 140px;
+    height: 140px;
+  }
+
+  &__img {
+    display: block;
+    object-fit: contain;
+    border-radius: 50%;
+    width: inherit;
+    height: inherit;
+  }
+
+  &__gamesOwnedCount {
+    @include title1;
+
+    margin-top: 80px;
+  }
+
+  &__url {
+    @include body1;
+
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+    font-size: 18px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

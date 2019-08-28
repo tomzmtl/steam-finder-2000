@@ -33,7 +33,7 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="SearchBar">
-        <div className="SearchBar__input-wrapper">
+        <div className="SearchBar__wrapper">
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"

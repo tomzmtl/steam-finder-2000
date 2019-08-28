@@ -5,7 +5,8 @@ $dark: #0E4261;
 
 @mixin title1 {
   font-size: 144px;
-  color: $dark;
+  line-height: 0.8;
+  color: mix($dark, white, 60);
 }
 
 @mixin header1 {
@@ -45,4 +46,8 @@ $dark: #0E4261;
   font-size: 14px;
   line-height: 16px;
   color: mix($dark, white, 40);
+}
+
+.UI__subtitle {
+  @include subtitle;
 }
