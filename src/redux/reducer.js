@@ -2,6 +2,7 @@ import ACTIONS from './actionTypes';
 
 
 const initialState = {
+  player: null,
   working: false,
 };
 
@@ -17,6 +18,12 @@ export default (state = initialState, action) => {
       return {
         ...state,
         working: false,
+      };
+
+    case ACTIONS.PLAYER.UPDATE:
+      return {
+        ...state,
+        player: action.player,
       };
 
     default: return state;

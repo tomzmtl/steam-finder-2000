@@ -8,3 +8,8 @@ export const startWorking = () => ({
 export const stopWorking = () => ({
   type: ACTIONS.WORKING.OFF,
 });
+
+export const updatePlayer = player => ({
+  type: ACTIONS.PLAYER.UPDATE,
+  player,
+});
