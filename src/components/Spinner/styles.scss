@@ -1,0 +1,48 @@
+@import '../../common/variables.scss';
+
+$diameter: 40px;
+$border-width: 2px;
+
+%circle {
+  border-radius: 50%;
+}
+
+%pseudo {
+  width: 100%;
+  height: 100%;
+  top: -$border-width;
+  left: -$border-width;
+  border: $border-width solid transparent;
+  border-right-color: $secondary;
+}
+
+.Spinner {
+  @extend %circle;
+
+  position: relative;
+  width: $diameter;
+  height: $diameter;
+  transition: opacity 200ms ease-in-out;
+  animation: spinner 600ms infinite linear;
+  border: $border-width solid #CCC;
+
+  &::after,
+  &::before {
+    @extend %circle;
+    @extend %pseudo;
+
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+  }
+
+  &::after {
+    transform: rotateZ(30deg);
+  }
+}
+
+@keyframes spinner {
+  0% { transform: rotateZ(0deg); }
+  100% { transform: rotateZ(359deg); }
+}
