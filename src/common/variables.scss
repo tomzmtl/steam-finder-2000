@@ -1,3 +1,48 @@
 $primary: #1B84B2;
 $secondary: #52BCDD;
 $dark: #0E4261;
+
+
+@mixin title1 {
+  font-size: 144px;
+  color: $dark;
+}
+
+@mixin header1 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: $dark;
+}
+
+@mixin header2 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  color: mix($dark, white, 40);
+}
+
+@mixin body1 {
+  font-size: 24px;
+  line-height: 28px;
+  color: $dark;
+}
+
+@mixin body2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: white;
+}
+
+@mixin caption {
+  font-size: 14px;
+  line-height: 16px;
+  color: #0E4261;
+}
+
+@mixin subtitle {
+  font-size: 14px;
+  line-height: 16px;
+  color: mix($dark, white, 40);
+}
