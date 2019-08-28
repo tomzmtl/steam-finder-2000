@@ -2,5 +2,5 @@ module.exports = {
   env: {
     browser: true,
   },
-  extends: 'react-app',
+  extends: ['react-app'],
 }

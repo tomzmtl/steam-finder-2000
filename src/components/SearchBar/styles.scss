@@ -1,0 +1,22 @@
+@import '../../common/variables';
+
+
+.SearchBar {
+  background: $primary;
+  padding: 20px 80px;
+
+  &__input {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 20px;
+    font-size: 24px;
+    outline: none;
+    transition: 200ms ease-out;
+    border-radius: 3px;
+    border: none;
+
+    &:focus {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  }
+}

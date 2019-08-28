@@ -1,26 +1,31 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { parse } from 'query-string';
 import './styles.scss';
-import * as api from '../../common/api';
+import SearchBar from '../SearchBar/container';
 
 
 class App extends React.Component {
   componentDidMount() {
-    const { updatePlayer } = this.props;
+    const { fetchPlayer } = this.props;
     const query = parse(window.location.search);
 
     if (query.steamId) {
-      api.fetchPlayer(query.steamId).then(player => updatePlayer(player));
+      fetchPlayer(query.steamId);
     }
   }
 
   render() {
     return (
       <div className="App">
-        <div className="App__main" />
+        <SearchBar />
       </div>
     );
   }
 }
+
+App.propTypes = {
+  fetchPlayer: PropTypes.func.isRequired,
+};
 
 export default App;

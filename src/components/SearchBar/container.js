@@ -5,7 +5,6 @@ import { fetchPlayer } from '../../redux/actions';
 
 const mapState = (state) => ({
   player: state.player,
-  working: state.working,
 });
 
 const mapDispatch = dispatch => ({
