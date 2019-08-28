@@ -1,0 +1,27 @@
+@import '../../common/variables';
+
+
+.PlayerStatus {
+  @include caption;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: -12px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  &--0::before { background: #999; }
+  &--1::before { background: #1DC91A; }
+  &--2::before { background: orange; }
+  &--3::before { background: blue; }
+  &--4::before { background: #999; }
+  &--5::before { background: blue; }
+  &--6::before { background: blue; }
+}

@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayerStatus from '../PlayerStatus/container';
+import PlayerStatus from '../PlayerStatus/component';
 import './styles.scss';
 
 
@@ -22,7 +22,7 @@ const PlayerProfile = ({ player, gameCount }) => (
     <div className="PlayerProfile__avatar">
       <img className="PlayerProfile__img" src={player.avatarfull} alt={player.personaname} />
     </div>
-    <PlayerStatus status={player.personastate} visibility={player.communityvisibilitystate} />
+    <PlayerStatus status={player.personastate} />
     {player.games ? renderOwnedGames(player.games.game_count) : null}
     <a className="PlayerProfile__url" href="{player.profileurl}" target="_blank">
       {player.profileurl}
