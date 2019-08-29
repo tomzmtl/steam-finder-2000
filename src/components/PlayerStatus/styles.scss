@@ -20,8 +20,8 @@
   &--0::before { background: #999; }
   &--1::before { background: #1DC91A; }
   &--2::before { background: orange; }
-  &--3::before { background: blue; }
+  &--3::before { background: $primary; }
   &--4::before { background: #999; }
-  &--5::before { background: blue; }
+  &--5::before { background: $secondary; }
   &--6::before { background: blue; }
 }
