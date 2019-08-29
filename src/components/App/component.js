@@ -4,7 +4,7 @@ import { parse } from 'query-string';
 import './styles.scss';
 import PlayerInfo from '../PlayerInfo/container';
 import SearchBar from '../SearchBar/container';
-import Spinner from '../PlayerInfo/component';
+import Spinner from '../Spinner/component';
 
 
 class App extends React.Component {
@@ -17,13 +17,27 @@ class App extends React.Component {
     }
   }
 
+  renderContent() {
+    const { working, player } = this.props;
+
+    if (working) {
+      return <Spinner />;
+    }
+
+    if (player) {
+      return (
+          <PlayerInfo />
+      )
+    }
+
+    return null;
+  }
+
   render() {
-    const { player, working } = this.props;
     return (
       <div className="App">
         <SearchBar />
-        {working ? <Spinner /> : null}
-        {player ? <PlayerInfo /> : null}
+        {this.renderContent()}
       </div>
     );
   }

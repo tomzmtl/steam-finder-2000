@@ -11,7 +11,7 @@ export default (state = initialState, action) => {
     case ACTIONS.WORKING.ON:
       return {
         ...state,
-        working: false,
+        working: true,
       };
 
     case ACTIONS.WORKING.OFF:
