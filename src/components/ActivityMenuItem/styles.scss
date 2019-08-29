@@ -1,0 +1,48 @@
+@import '../../common/variables';
+
+
+.ActivityMenuItem {
+  position: relative;
+  padding: 40px 0 40px 20px;
+  background: $primary;
+  transition: 200ms ease-out;
+
+  &__label {
+    @include body2;
+
+    border-bottom: 1px solid white;
+  }
+
+  & + & {
+    margin-top: 16px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 80px;
+    height: 61px;
+    transition: 200ms ease-out;
+    background: $primary;
+    top: 0;
+    right: 0;
+  }
+
+  &:not(&--active):hover {
+    background: $dark;
+
+    &::after {
+      background: $dark;
+    }
+  }
+
+  &--active {
+    background: $secondary;
+
+    &::after {
+      background: $secondary;
+      transform: translateX(100%);
+    }
+  }
+}

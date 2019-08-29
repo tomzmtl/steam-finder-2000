@@ -22,3 +22,8 @@ export const fetchPlayer = playerId => (dispatch, getState) => {
     dispatch(stopWorking());
   });
 }
+
+export const changeActivityTab = index => ({
+  type: ACTIONS.ACTIVITY.UPDATE,
+  index,
+})

@@ -5,6 +5,7 @@ import './styles.scss';
 import PlayerInfo from '../PlayerInfo/container';
 import SearchBar from '../SearchBar/container';
 import Spinner from '../Spinner/component';
+import ActivityMenu from '../ActivityMenu/container';
 
 
 class App extends React.Component {
@@ -26,7 +27,14 @@ class App extends React.Component {
 
     if (player) {
       return (
+        <React.Fragment>
           <PlayerInfo />
+          {
+            player.games
+            ? <ActivityMenu />
+            : <div>This player doesn't want to share game data. No peeking!</div>
+          }
+        </React.Fragment>
       )
     }
 
