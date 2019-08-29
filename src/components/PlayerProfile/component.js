@@ -16,7 +16,7 @@ const renderOwnedGames = (count) => {
   )
 }
 
-const PlayerProfile = ({ player, gameCount }) => (
+const PlayerProfile = ({ player }) => (
   <div className="PlayerProfile">
     <div className="PlayerProfile__name">{player.personaname}</div>
     <div className="PlayerProfile__avatar">
@@ -24,7 +24,7 @@ const PlayerProfile = ({ player, gameCount }) => (
     </div>
     <PlayerStatus status={player.personastate} />
     {player.games ? renderOwnedGames(player.games.game_count) : null}
-    <a className="PlayerProfile__url" href="{player.profileurl}" target="_blank">
+    <a className="PlayerProfile__url" href={player.profileurl} target="_blank" rel="noopener noreferrer">
       {player.profileurl}
     </a>
     <div className="UI__subtitle">Profile URL</div>

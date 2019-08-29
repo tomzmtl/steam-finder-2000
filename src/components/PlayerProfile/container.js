@@ -3,7 +3,6 @@ import component from './component';
 
 
 const mapState = (state) => ({
-  gameCount: state.gameCount,
   player: state.player,
 });
 
