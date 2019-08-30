@@ -15,13 +15,22 @@ export const updatePlayer = player => ({
   player,
 });
 
+export const showError = () => ({
+  type: ACTIONS.ERROR,
+});
+
 export const fetchPlayer = playerId => (dispatch, getState) => {
   dispatch(startWorking());
-  api.fetchPlayer(playerId).then(player => {
-    dispatch(updatePlayer(player));
-    dispatch(stopWorking());
-  });
-}
+  api.fetchPlayer(playerId)
+    .then(response => {
+      if (response.error) {
+        dispatch(showError());
+      } else {
+        dispatch(updatePlayer(response));
+      }
+      dispatch(stopWorking());
+    });
+  };
 
 export const changeActivityTab = index => ({
   type: ACTIONS.ACTIVITY.UPDATE,

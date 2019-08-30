@@ -20,10 +20,14 @@ class App extends React.Component {
   }
 
   renderContent() {
-    const { working, player } = this.props;
+    const { error, working, player } = this.props;
 
     if (working) {
       return <Spinner />;
+    }
+
+    if (error) {
+      return <div className="App__noGameData">Ooops! an error occured while fetching the data. Maybe double-check the SteamID you entered, of retry later.</div>
     }
 
     if (player) {

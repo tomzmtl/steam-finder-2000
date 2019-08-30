@@ -17,13 +17,21 @@ export const getTopGames = (games, limit = 5) => {
  * @return {array} Title and games wrapped in an array for easy access.
  */
 export const updateGamesList = (tabIndex, player) => {
-  if (!player.games) {
-    return [null, []];
-  }
-
   switch (tabIndex) {
-    case 0: return ['Top 10 Games', getTopGames(player.games.games, 10)];
-    case 1: return ['Last 2 weeks', player.recentGames.games || []];
+    case 0: {
+      if (player.games) {
+        return ['Top 10 Games', getTopGames(player.games.games, 10)];
+      }
+      return [null, []];
+    }
+
+    case 1: {
+      if (player.recentGames) {
+        return ['Last 2 weeks', player.recentGames.games || []];
+      }
+      return [null, []];
+    }
+
     default: return [null, []];
   }
 }

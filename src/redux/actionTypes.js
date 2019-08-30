@@ -2,6 +2,7 @@ export default {
   ACTIVITY: {
     UPDATE: 'ACTIVITY.UPDATE',
   },
+  ERROR: 'ERROR',
   PLAYER: {
     UPDATE: 'PLAYER.UPDATE',
   },

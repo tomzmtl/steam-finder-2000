@@ -4,6 +4,7 @@ import { updateGamesList } from './helpers';
 
 const initialState = {
   activityTab: 0, // currently selected tab
+  error: false, // flag if there was a fetch error
   games: {
     list: [], // games displayed in games panel
     title: null, // title of game panel
@@ -31,6 +32,7 @@ export default (state = initialState, action) => {
 
       return {
         ...state,
+        error: false,
         games: {
           list: games,
           title,
@@ -51,6 +53,12 @@ export default (state = initialState, action) => {
         },
       };
     }
+
+    case ACTIONS.ERROR:
+      return {
+        ...initialState,
+        error: true,
+      };
 
     default: return state;
   }

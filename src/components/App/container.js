@@ -4,6 +4,7 @@ import { fetchPlayer } from '../../redux/actions';
 
 
 const mapState = (state) => ({
+  error: state.error,
   player: state.player,
   working: state.working,
 });
