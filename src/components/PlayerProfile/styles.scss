@@ -37,6 +37,8 @@
   &__url {
     @include body1;
 
+    // adding a width limit here to avoid overlapping with the profile image
+    width: 370px;
     word-break: break-word;
     display: inline-block;
     margin-top: 30px;

@@ -54,3 +54,7 @@ $two-col-break: 1200px;
 .UI__subtitle {
   @include subtitle;
 }
+
+.UI__body1 {
+  @include body1;
+}

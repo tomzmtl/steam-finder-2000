@@ -19,7 +19,7 @@ const PlayerStatus = ({ status }) => {
 
   const classes = classnames({
     PlayerStatus: true,
-    [`PlayerStatus--${status}`]: status,
+    [`PlayerStatus--${status}`]: true,
   });
 
   return <div className={classes}>{getStatusLabel()}</div>;

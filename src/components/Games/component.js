@@ -12,7 +12,7 @@ const Games = ({ games, title, working }) => {
       return <div>Nothing to see here!</div>
     }
 
-    return games.map(game => <Game game={game} />);
+    return games.map((game, index) => <Game game={game} position={index + 1} key={game.appid} />);
   };
 
   return (

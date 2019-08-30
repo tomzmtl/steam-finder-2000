@@ -5,6 +5,52 @@
   width: $main-width;
   margin: 0 auto;
 
+  & + & {
+    margin-top: 10px;
+  }
+
+  &__name {
+    @include header2;
+
+    margin-bottom: 21px;
+  }
+
+  &__data {
+    display: flex;
+  }
+
+  &__image {
+    width: 50%;
+    max-width: 400px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &__info {
+    display: flex;
+    align-self: center;
+    align-items: center;
+  }
+
+  &__icon {
+    margin-right: 40px;
+  }
+
+  &__stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .UI__subtitle {
+      margin-right: 10px;
+    }
+  }
+
   @media screen and (min-width: $two-col-break) {
     width: 100%;
   }

@@ -17,7 +17,7 @@
     border-radius: 50%;
   }
 
-  &--0::before { background: #999; }
+  &--0::before { background: red; }
   &--1::before { background: #1DC91A; }
   &--2::before { background: orange; }
   &--3::before { background: $primary; }

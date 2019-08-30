@@ -9,6 +9,11 @@
     width: $main-width;
   }
 
+  &__noGameData {
+    padding: 0 80px;
+    margin-top: 50px;
+  }
+
   .Spinner {
     margin: 80px auto;
   }
