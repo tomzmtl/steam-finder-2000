@@ -3,13 +3,13 @@ import { updateGamesList } from './helpers';
 
 
 const initialState = {
-  activityTab: 0,
+  activityTab: 0, // currently selected tab
   games: {
-    list: [],
-    title: null,
+    list: [], // games displayed in games panel
+    title: null, // title of game panel
   },
-  player: null,
-  working: false,
+  player: null, // full player object
+  working: false, // data loading flag
 };
 
 export default (state = initialState, action) => {
