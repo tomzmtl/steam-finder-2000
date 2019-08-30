@@ -1,3 +1,8 @@
-.PlayerInfo {
+@import '../../common/variables';
 
+
+.PlayerInfo {
+  width: 100%;
+  max-width: $main-width;
+  margin: 0 auto;
 }

@@ -1,4 +1,10 @@
+@import '../../common/variables';
+
+
 .ActivityMenu {
+  width: 100%;
+  max-width: $main-width;
+  margin: 0 auto;
   padding: 0 80px;
   margin-top: 40px;
   padding-bottom: 100px;

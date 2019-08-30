@@ -37,6 +37,7 @@
   &__url {
     @include body1;
 
+    word-break: break-word;
     display: inline-block;
     margin-top: 30px;
     text-decoration: none;

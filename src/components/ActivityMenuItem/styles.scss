@@ -29,11 +29,15 @@
     right: 0;
   }
 
-  &:not(&--active):hover {
-    background: $dark;
+  &:not(&--active) {
+    .ActivityMenuItem__label {
+      font-weight: normal;
+    }
 
-    &::after {
-      background: $dark;
+    &:hover {
+      &::after {
+        transform: translateX(20%);
+      }
     }
   }
 
