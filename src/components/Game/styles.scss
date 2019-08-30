@@ -1,0 +1,11 @@
+@import '../../common/variables';
+
+
+.Game {
+  width: $main-width;
+  margin: 0 auto;
+
+  @media screen and (min-width: $two-col-break) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../common/variables';
+
+
+.Games {
+  padding-bottom: 80px;
+
+  &__title {
+    @include body2;
+
+    padding: 10px 15px;
+    margin-bottom: 50px;
+    background: $secondary;
+  }
+
+  &__list {
+    padding: 0 15px;
+  }
+
+  @media screen and (max-width: $two-col-break - 1) {
+    &__titleWrapper,
+    &__list {
+      width: $main-width;
+      margin: 0 auto;
+    }
+  }
+
+  @media screen and (min-width: $two-col-break) {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+  }
+}

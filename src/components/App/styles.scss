@@ -1,11 +1,25 @@
+@import '../../common/variables';
+
+
 .App {
   margin: 0 auto;
+
+  &__main {
+    min-height: 100vh;
+    width: $main-width;
+  }
 
   .Spinner {
     margin: 80px auto;
   }
 
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: $two-col-break) {
+    display: flex;
+    margin: 0;
 
+    &__main {
+      flex-shrink: 0;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    }
   }
 }

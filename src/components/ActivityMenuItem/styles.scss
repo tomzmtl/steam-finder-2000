@@ -6,6 +6,7 @@
   padding: 40px 0 40px 20px;
   background: $primary;
   transition: 200ms ease-out;
+  cursor: pointer;
 
   &__label {
     @include body2;

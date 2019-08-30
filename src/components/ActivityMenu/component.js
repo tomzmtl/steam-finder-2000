@@ -5,7 +5,10 @@ import './styles.scss';
 
 
 const ActivityMenu = ({ activeTab, changeTab }) => {
-  const handleSetActive = (index) => () => changeTab(index);
+  const handleSetActive = (index) => {
+    window.scrollTo(0, 0);
+    return () => changeTab(index);
+  }
 
   const renderTabs = () => {
     const tabs = [

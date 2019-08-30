@@ -6,6 +6,7 @@ import PlayerInfo from '../PlayerInfo/container';
 import SearchBar from '../SearchBar/container';
 import Spinner from '../Spinner/component';
 import ActivityMenu from '../ActivityMenu/container';
+import Games from '../Games/container';
 
 
 class App extends React.Component {
@@ -31,8 +32,12 @@ class App extends React.Component {
           <PlayerInfo />
           {
             player.games
-            ? <ActivityMenu />
-            : <div>This player doesn't want to share game data. No peeking!</div>
+              ? <ActivityMenu />
+              : (
+                <div className="App__noGameData">
+                  This player doesn't want to share game data. No peeking!
+                </div>
+              )
           }
         </React.Fragment>
       )
@@ -44,8 +49,11 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <SearchBar />
-        {this.renderContent()}
+        <div className="App__main">
+          <SearchBar />
+          {this.renderContent()}
+        </div>
+        <Games />
       </div>
     );
   }
