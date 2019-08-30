@@ -1,10 +1,11 @@
 # Developer Notes
 
-Time spent: 6h30
+Time spent: 7h30
 
 **Disclaimer:**
 
-- During my development, I found the Steam API endpoints to be very unstable. A lot of time, requests would just return invalid JSON responses. I sometimes had to hit the submit button up to 10 times before getting a good response for the same request. When it works, it's all good, but be ready to insist on that button.
+- During my development, I found the Steam API endpoints to be very unstable. A lot of time, requests would just return invalid JSON responses. So you may have to retry some requests.
+- I also had issues multiple times with player game list returning empty after many attempts. This will make the UI show as if the player game data is private. I have no idea why this is, but all my test IDs eventually started to return empty lists. Maybe there's a timeout on specific API keys after too many requests. Just try again using another Steam ID.
 - Steam players can choose to have their games list private. The UI accounts for this, but be sure to load a user with a public games list and recent activity to see the whole thing.
 
 ## Overall architecture
