@@ -1,5 +1,6 @@
 export const getTopGames = (games, limit = 5) => {
-  return games;
+  const sortFn = (a, b) => a.playtime_forever < b.playtime_forever ? 1 : -1;
+  return games.sort(sortFn).slice(0, limit);
 }
 
 
