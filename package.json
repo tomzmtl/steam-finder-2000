@@ -7,7 +7,7 @@
     "es6-promise": "^4.2.6",
     "eslint-plugin-react": "^7.14.3",
     "isomorphic-fetch": "^2.2.1",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "preload-js": "^0.6.3",
     "query-string": "^6.8.2",
     "react": "^16.8.6",
